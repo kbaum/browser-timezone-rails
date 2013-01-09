@@ -2,7 +2,7 @@ require "browser_tzone/engine"
 
 module BrowserTzone
   class Railtie < Rails::Railtie
-    initializer 'browser_tzone.initialize' do |app|
+    config.after_initialize do
 
       ::ApplicationController.class_eval do
 
