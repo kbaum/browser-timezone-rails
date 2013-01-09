@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.cookie
+//= require detect_timezone
+//= require browser_tzone/set_time_zone
