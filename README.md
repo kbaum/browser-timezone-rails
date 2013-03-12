@@ -24,5 +24,3 @@ The cookie is set each full page request and lives for 365 days
 
 ### Caveat
 The first request ever made by a user's browser to your app will not set the browser's time zone as the javascript that sets the cookie has not yet run on their browser.  This will only happen once and for me it was not a problem.  
-
-This project rocks and uses MIT-LICENSE.
