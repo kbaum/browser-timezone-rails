@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Sets the browser timezone within rails"
   s.description = "The browser timezone is set on the Time#zone"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", ">= 3.1"
