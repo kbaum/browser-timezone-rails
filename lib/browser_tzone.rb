@@ -19,7 +19,7 @@ module BrowserTzone
         end
 
         def browser_timezone
-          cookies["browser.timezone"].tap{ |tz| logger.debug "detected timezone #{tz}" }
+          cookies["browser.timezone"]
         end
 
 
