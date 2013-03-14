@@ -25,5 +25,8 @@ The browsers timezone is set in a cookie using the awesome [jsTimezoneDetect](ht
 ### About that cookie
 The cookie is set each full page request and lives for 365 days
 
+### Thread safety
+Yes.  It uses the Rails Time.zone method which is thread safe.
+
 ### Caveat
 The first request ever made by a user's browser to your app will not set the browser's time zone as the javascript that sets the cookie has not yet run on their browser.  This will only happen once and for me it was not a problem.  
