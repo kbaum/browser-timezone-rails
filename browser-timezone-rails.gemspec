@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "browser_tzone/version"
+require "browser-timezone-rails/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "browser_tzone"
-  s.version     = BrowserTzone::VERSION
+  s.version     = BrowserTimezoneRails::VERSION
   s.authors     = ["kbaum"]
   s.email       = ["karl.baum@gmail.com"]
   s.homepage    = "https://github.com/kbaum/browser_tzone"

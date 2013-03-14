@@ -1,6 +1,6 @@
-require "browser_tzone/engine"
+require "browser-timezone-rails/engine"
 
-module BrowserTzone
+module BrowserTimezoneRails
   class Railtie < Rails::Railtie
     config.after_initialize do
 

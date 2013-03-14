@@ -1,2 +1,2 @@
-BrowserTzone::Engine.routes.draw do
+BrowserTimezoneRails::Engine.routes.draw do
 end

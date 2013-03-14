@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    browser_tzone (0.0.3)
+    browser_tzone (0.0.5)
       jquery-rails
       rails (>= 3.1)
 

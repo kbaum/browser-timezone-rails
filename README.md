@@ -1,4 +1,4 @@
-# browser_tzone
+# BrowserTimezoneRails
 
 [![Build Status](https://secure.travis-ci.org/kbaum/browser_tzone.png)](http://travis-ci.org/kbaum/browser_tzone)
 [![Code Quality](https://codeclimate.com/badge.png)](https://codeclimate.com/github/kbaum/browser_tzone)
@@ -10,12 +10,12 @@ Rails Engine which sets the Rails timezone to the browser's configured timezone 
 Add it to your Gemfile.
 
 ```ruby
-gem 'browser_tzone'
+gem 'browser-timezone-rails'
 ```
 
 Require the javascript file.
 ```
-//= require browser_tzone/application.js
+//= require browser_timezone_rails/application.js
 ```
 
 ## How it works
