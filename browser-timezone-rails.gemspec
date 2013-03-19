@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = BrowserTimezoneRails::VERSION
   s.authors     = ["kbaum"]
   s.email       = ["karl.baum@gmail.com"]
-  s.homepage    = "https://github.com/kbaum/browser_tzone"
+  s.homepage    = "https://github.com/kbaum/browser-timezone-rails"
   s.summary     = "Sets the browser timezone within rails"
   s.description = "The browser timezone is set on the Time#zone"
 
