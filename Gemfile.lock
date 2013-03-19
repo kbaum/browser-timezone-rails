@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    browser_tzone (0.0.5)
+    browser-timezone-rails (0.0.5)
       jquery-rails
       rails (>= 3.1)
 
@@ -129,7 +129,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  browser_tzone!
+  browser-timezone-rails!
   capybara
   jquery-rails
   launchy
