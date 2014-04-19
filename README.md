@@ -29,15 +29,15 @@ The cookie is set each full page request and lives for 365 days
 Yes.  It uses the Rails Time.zone method which is thread safe.
 
 ### Initial Reload
-When the page loads for the first time it will automatically set the cookie and refresh the page so that all times will be displayed in the detected timezone.
+By default, the first time user opens the page, the cookie will not be set, so the times will be wrong, but after second page load server will read the cookie and all times will be displayed in the detected timezone.
 
-This behavior can be disabled by overriding options of the __BrowserTZone__:
+If you want the page to reload itself after first visit, without user even noticing, you can enable initial reload by overriding options of the __BrowserTZone__:
 ```ruby
 # app/assets/javascripts/application.js.coffee
 //= require browser_timezone_rails/application
 
 # Overriding options
-window.BrowserTZoneOptions['initialReload'] = false # This will disable initial reload
+window.BrowserTZoneOptions['initialReload'] = true # This will enable initial reload
 ```
 
 ### Development
