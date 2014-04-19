@@ -1,5 +1,5 @@
 window.BrowserTZoneOptions ||= {
-  initialReload: true
+  initialReload: false
 }
 
 window.BrowserTZone ||= {}
