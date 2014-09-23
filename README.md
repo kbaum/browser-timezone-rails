@@ -17,10 +17,15 @@ Require the javascript file.
 ```
 //= require browser_timezone_rails/application.js
 ```
+That's it! No other configuration is needed as it's all done for you with this gem including setting up your application controller to start using your users' zones.
 
 ## How it works
 
 The browsers timezone is set in a cookie using the awesome [jsTimezoneDetect](https://bitbucket.org/pellepim/jstimezonedetect) javascript library.  That cookie is then read during each request to set the Rails timezone for that user.
+
+You can also read more about this implementation here: [Blog](http://cowjumpedoverthecommodore64.blogspot.in/2013/03/setting-rails-timezone-to-users.html)
+
+For those of you who need or want to do this on the backend with just Rails, Ryan Bates has a good RailsCast on how to that: [RailsCast #106](http://railscasts.com/episodes/106-time-zones-revised)
 
 ### About that cookie
 The cookie is set each full page request and lives for 365 days
