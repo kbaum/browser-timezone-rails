@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 3.1"
   s.add_dependency "jquery-rails"
+  s.add_dependency "jquery-cookie-rails"
+  s.add_dependency "jstz-rails"
 
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "capybara"
