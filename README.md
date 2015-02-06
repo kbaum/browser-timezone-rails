@@ -13,9 +13,12 @@ Add it to your Gemfile.
 gem 'browser-timezone-rails'
 ```
 
-Require the javascript file.
+Make sure you have each of the following entries in your application.js:
 ```
-//= require browser_timezone_rails/application.js
+//= require jquery
+//= require jquery.cookie
+//= require jstz
+//= require browser_timezone_rails/set_time_zone
 ```
 That's it! No other configuration is needed as it's all done for you with this gem including setting up your application controller to start using your users' zones.
 
