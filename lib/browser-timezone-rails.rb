@@ -1,4 +1,7 @@
 require "browser-timezone-rails/engine"
+require 'jquery-rails'
+require 'jquery-cookie-rails'
+require 'jstz-rails'
 
 module BrowserTimezoneRails
   module TimezoneControllerSetup
