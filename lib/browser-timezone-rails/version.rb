@@ -1,3 +1,3 @@
 module BrowserTimezoneRails
-  VERSION = "0.0.9"
+  VERSION = "0.1.00"
 end
