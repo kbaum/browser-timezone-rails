@@ -6,17 +6,14 @@ require 'jstz-rails'
 module BrowserTimezoneRails
   module TimezoneControllerSetup
     def self.included(base)
-      base.send(:around_filter, :set_time_zone)
+      base.send(:prepend_around_filter, :set_time_zone)
     end
 
     private
 
-    def set_time_zone
-      old_time_zone = Time.zone
-      Time.zone = browser_timezone if browser_timezone.present?
-      yield
-    ensure
-      Time.zone = old_time_zone
+    def set_time_zone(&action)
+      # Use existing methods to simplify filter
+      Time.use_zone(browser_timezone.presence || Time.zone, &action)
     end
 
     def browser_timezone
