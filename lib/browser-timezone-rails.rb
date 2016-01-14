@@ -6,7 +6,7 @@ require 'jstz-rails'
 module BrowserTimezoneRails
   module TimezoneControllerSetup
     def self.included(base)
-      base.send(:prepend_around_filter, :set_time_zone)
+      base.send(:prepend_around_action, :set_time_zone)
     end
 
     private
