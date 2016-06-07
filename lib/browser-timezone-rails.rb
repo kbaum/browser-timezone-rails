@@ -1,6 +1,5 @@
 require "browser-timezone-rails/engine"
-require 'jquery-rails'
-require 'jquery-cookie-rails'
+require 'js_cookie_rails'
 require 'jstz-rails'
 
 module BrowserTimezoneRails
