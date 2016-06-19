@@ -15,7 +15,7 @@ gem 'browser-timezone-rails'
 
 Make sure you have each of the following entries in your application.js:
 ```
-//= require js_cookie_rails
+//= require js.cookie
 //= require jstz
 //= require browser_timezone_rails/set_time_zone
 ```
