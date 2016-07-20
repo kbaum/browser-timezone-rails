@@ -1,7 +1,6 @@
 require 'spec_helper'
 
-
-describe 'sets the timezone' do
+describe 'sets the timezone', type: :request do
 
   before do
     #Rails server timezone is UTC...
@@ -24,6 +23,17 @@ describe 'sets the timezone' do
 
     it 'resets the time zone back to utc after each request' do
       Time.zone.name.should == 'UTC'
+    end
+  end
+
+  context 'invalid timezone' do
+    before do
+      page.driver.browser.set_cookie "browser.timezone=Something/Invalid"
+      visit '/timezone'
+    end
+
+    it 'does not raise an error' do
+      page.should have_content "UTC"
     end
   end
 
