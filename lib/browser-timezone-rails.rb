@@ -12,7 +12,7 @@ module BrowserTimezoneRails
 
     def set_time_zone(&action)
       # Use existing methods to simplify filter
-      Time.use_zone(browser_timezone.presence || Time.zone, &action)
+      Time.use_zone(Time.find_zone(browser_timezone.presence) || Time.zone, &action)
     end
 
     def browser_timezone
