@@ -18,11 +18,11 @@ describe 'sets the timezone', type: :request do
     end
 
     it 'sets the timezone properly' do
-      page.should have_content "Australia/Sydney"
+      expect(page).to have_content "Australia/Sydney"
     end
 
     it 'resets the time zone back to utc after each request' do
-      Time.zone.name.should == 'UTC'
+      expect(Time.zone.name).to eq 'UTC'
     end
   end
 
@@ -33,7 +33,7 @@ describe 'sets the timezone', type: :request do
     end
 
     it 'does not raise an error' do
-      page.should have_content "UTC"
+      expect(page).to have_content "UTC"
     end
   end
 
@@ -45,7 +45,7 @@ describe 'sets the timezone', type: :request do
     end
 
     it 'sets the timezone properly' do
-      page.should have_content "(GMT+00:00) UTC"
+      expect(page).to have_content "(GMT+00:00) UTC"
     end
 
   end
