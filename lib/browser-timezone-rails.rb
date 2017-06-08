@@ -17,6 +17,8 @@ module BrowserTimezoneRails
 
     def browser_timezone
       JSON.parse(cookies["browser.timezone"])["timezone"]
+    rescue
+      nil
     end
   end
 
