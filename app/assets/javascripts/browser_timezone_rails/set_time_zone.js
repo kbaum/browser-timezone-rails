@@ -16,7 +16,7 @@
   function setCookie() {
     var cookie = { timezone: getTimeZoneName() };
     var existingCookie = readCookie();
-    if !(existingCookie.override === undefined) {
+    if (existingCookie.override !== undefined) {
       return false;
     }
     if (existingCookie.timezone != cookie.timezone) {
