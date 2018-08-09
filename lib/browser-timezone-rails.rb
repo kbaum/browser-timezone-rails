@@ -23,7 +23,9 @@ module BrowserTimezoneRails
   class Railtie < Rails::Engine
     initializer "browser_timezone_rails.controller" do
       ActiveSupport.on_load(:action_controller) do
-        include BrowserTimezoneRails::TimezoneControllerSetup
+        if self == ActionController::Base
+          include BrowserTimezoneRails::TimezoneControllerSetup
+        end
       end
     end
   end
