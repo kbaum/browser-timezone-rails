@@ -3,9 +3,15 @@ require 'js_cookie_rails'
 require 'jstz-rails'
 
 module BrowserTimezoneRails
+  if Rails::VERSION::MAJOR == 3 || (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR >= 2)
+    PREPEND_METHOD = :prepend_around_filter
+  else
+    PREPEND_METHOD = :prepend_around_action
+  end
+
   module TimezoneControllerSetup
     def self.included(base)
-      base.send(:prepend_around_action, :set_time_zone)
+      base.send(PREPEND_METHOD, :set_time_zone)
     end
 
     private
