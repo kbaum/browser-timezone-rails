@@ -1,4 +1,9 @@
 language: ruby
+env:
+  - "RAILS_VERSION=3.2.22.5"
+  - "RAILS_VERSION=4.2.11"
+  - "RAILS_VERSION=5.2.3"
+  - "RAILS_VERSION=master"
 rvm:
   - "2.2.4"
 script: bundle exec rspec spec
