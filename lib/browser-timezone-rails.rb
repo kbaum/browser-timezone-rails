@@ -1,13 +1,15 @@
-require "browser-timezone-rails/engine"
+# frozen_string_literal: true
+
+require 'browser-timezone-rails/engine'
 require 'js_cookie_rails'
 require 'jstz-rails'
 
 module BrowserTimezoneRails
-  if Rails::VERSION::MAJOR == 3 || (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR >= 2)
-    PREPEND_METHOD = :prepend_around_filter
-  else
-    PREPEND_METHOD = :prepend_around_action
-  end
+  PREPEND_METHOD = if Rails::VERSION::MAJOR == 3 || (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR >= 2)
+                     :prepend_around_filter
+                   else
+                     :prepend_around_action
+                   end
 
   module TimezoneControllerSetup
     def self.included(base)
@@ -22,12 +24,12 @@ module BrowserTimezoneRails
     end
 
     def browser_timezone
-      cookies["browser.timezone"]
+      cookies['browser.timezone']
     end
   end
 
   class Railtie < Rails::Engine
-    initializer "browser_timezone_rails.controller" do
+    initializer 'browser_timezone_rails.controller' do
       ActiveSupport.on_load(:action_controller) do
         if self == ActionController::Base
           include BrowserTimezoneRails::TimezoneControllerSetup
