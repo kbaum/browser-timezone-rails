@@ -6,6 +6,7 @@ require "browser-timezone-rails/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "browser-timezone-rails"
+  s.version     = '1.0.4'
   s.version     = BrowserTimezoneRails::VERSION
   s.authors     = ["kbaum"]
   s.email       = ["karl.baum@gmail.com"]
