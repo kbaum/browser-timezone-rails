@@ -16,14 +16,19 @@ gem 'browser-timezone-rails'
 Make sure you have each of the following entries in your application.js:
 ```
 //= require js.cookie
-//= require jstz
 //= require browser_timezone_rails/set_time_zone
 ```
 That's it! No other configuration is needed as it's all done for you with this gem including setting up your application controller to start using your users' zones.
 
 ## How it works
 
-The browsers timezone is set in a cookie using the awesome [jsTimezoneDetect](https://bitbucket.org/pellepim/jstimezonedetect) javascript library.  That cookie is then read during each request to set the Rails timezone for that user.
+The browser's timezone is set in a cookie using the modern [ECMAScript Internationalization API](https://www.ecma-international.org/ecma-402/)
+
+Caveat: doesn't work with Internet Explorer.
+
+(Up to 1.0.4 version of the gem, the cookie was set via the [jsTimezoneDetect](https://bitbucket.org/pellepim/jstimezonedetect) javascript library, which, however, was often inaccurate.)  
+
+That cookie is then read during each request to set the Rails timezone for that user.
 
 You can also read more about this implementation here: [Blog](http://cowjumpedoverthecommodore64.blogspot.in/2013/03/setting-rails-timezone-to-users.html)
 

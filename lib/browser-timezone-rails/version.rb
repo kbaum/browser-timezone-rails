@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BrowserTimezoneRails
-  VERSION = "1.0.4"
+  VERSION = '1.1.0'
 end
