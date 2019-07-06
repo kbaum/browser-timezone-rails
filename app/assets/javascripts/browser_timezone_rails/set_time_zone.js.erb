@@ -2,7 +2,7 @@
 
   Cookies.set(
     "browser.timezone",
-    jstz.determine().name(),
+    Intl.DateTimeFormat().resolvedOptions().timeZone,
     {
       expires: 365,
       path: '/',
@@ -10,4 +10,3 @@
     }
   );
 })();
-

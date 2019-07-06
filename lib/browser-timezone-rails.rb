@@ -2,10 +2,9 @@
 
 require 'browser-timezone-rails/engine'
 require 'js_cookie_rails'
-require 'jstz-rails'
 
 module BrowserTimezoneRails
-  PREPEND_METHOD = if Rails::VERSION::MAJOR == 3 || (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR >= 2)
+  PREPEND_METHOD = if Rails::VERSION::MAJOR == 3 || (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR < 2)
                      :prepend_around_filter
                    else
                      :prepend_around_action
